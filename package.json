@@ -1,6 +1,6 @@
 {
   "name": "@rc5/nut",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A practical library of JavaScript tool functions extracted and summarized at work",
   "scripts": {
     "test": "jest",
@@ -83,8 +83,7 @@
     "functional"
   ],
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "main": "./dist/client/index.js",
   "module": "./dist/client/index.mjs",
