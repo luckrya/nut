@@ -1,0 +1,109 @@
+{
+  "name": "@rc5/nut",
+  "version": "0.0.0",
+  "description": "A practical library of JavaScript tool functions extracted and summarized at work",
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf dist && rollup -c",
+    "build:w": "rollup -c -w",
+    "type:check": "tsc --noEmit",
+    "type:dts": "tsc --emitDeclarationOnly",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "deepmerge": "^4.3.1",
+    "enquirer": "^2.4.1",
+    "execa": "^8.0.1",
+    "fs-extra": "^11.2.0",
+    "lru-cache": "^10.1.0",
+    "node-fetch": "^3.3.2",
+    "ora": "^8.0.1",
+    "read-pkg": "^9.0.1",
+    "semver": "^7.5.4",
+    "strip-ansi": "^7.1.0"
+  },
+  "devDependencies": {
+    "@rc5/eslint-config-core": "^0.0.1",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.0",
+    "@types/semver": "^7.5.6",
+    "conventional-changelog-cli": "^4.1.0",
+    "esbuild": "^0.19.11",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "rollup": "^4.9.4",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3",
+    "vitepress": "1.0.0-rc.36"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testMatch": [
+      "<rootDir>/src/__tests__/*.(test|spec).ts"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@rc5/core"
+    ]
+  },
+  "author": "@rc5",
+  "license": "MIT",
+  "homepage": "https://github.com/luckrya/utility#readme",
+  "bugs": {
+    "url": "https://github.com/luckrya/utility/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckrya/utility.git"
+  },
+  "packageManager": "pnpm@8.0.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "nut",
+    "javascript",
+    "typescript",
+    "util",
+    "utils",
+    "utility",
+    "browser",
+    "client",
+    "node",
+    "functional"
+  ],
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "./dist/client/index.js",
+  "module": "./dist/client/index.mjs",
+  "typings": "./dist/client/index.d.ts",
+  "unpkg": "./dist/nut.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/client/index.mjs",
+      "require": "./dist/client/index.js",
+      "types": "./dist/client/index.d.ts"
+    },
+    "./node": {
+      "import": "./dist/node/index.mjs",
+      "require": "./dist/node/index.js",
+      "types": "./dist/node/index.d.ts"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "sideEffects": false
+}

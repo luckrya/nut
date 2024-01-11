@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* 严格模式类型检查*/
+    "strict": true,
+    /* 设置 JS 语言版本，并包含兼容的库类型声明 */
+    "target": "ESNext",
+    /* 跳过所有 .d.ts 文件的类型检查 */
+    "skipLibCheck": true,
+    /* 当模块没有默认导出时候，允许写 import x from "y" */
+    "allowSyntheticDefaultImports": true,
+    /* 当使用 TSC 编译器时，输出的文件存放目录 */
+    "outDir": "dist",
+    /* 当使用 TSC 编译器时，为项目中的 .ts 文件生成对应的 .d.ts 文件 */
+    "declaration": true,
+    /* 当使用 TSC 编译器时，为项目中的 .ts 文件生成对应的 .d.ts 文件生成 sourcemap */
+    "declarationMap": true,
+    /* 当使用 TSC 编译器时，为项目中的 .ts 文件生成对应的 .d.ts 文件存放目录 */
+    "declarationDir": "dist",
+    /* 当使用 TSC 编译器时，只输出 .d.ts 文件而不输出编译后的 JS 文件 */
+    // "emitDeclarationOnly": true,
+    /* 允许 JS 文件成为程序的一部分 */
+    "allowJs": false,
+    /* 启用导入 .json 文件 */
+    "resolveJsonModule": true,
+    /* 指定源文件中的根文件夹 */
+    "rootDir": "src",
+    /* 解析非相对模块名称的基目录, 使用 "./" TS 将查找与 tsconfig.json 位于同一文件夹中的文件 */
+    "baseUrl": "src",
+    /**
+     * 参考：https://juejin.cn/post/7221551421833314360
+     *
+     * 一个文件被视为 esm 模块，必须满足其中一个条件
+     *   1. 最近的 package.json 设置了 "type": "module"
+     *   2. 扩展名是 .mjs
+     * 使用现代 node.js 的模块解析策略
+     *   classic:  模块解析策略就是一直递归往上找同名文件
+     *   node:     模块解析策略 require.resolve
+     *   nodenext: 支持 exports 配置模块类型解析策略（模块解析策略严格按照最新的 nodejs 模块解析算法判断一个 ts 文件是 commonjs 模块还是 esm 模块）
+     */
+    "moduleResolution": "Bundler"
+  },
+  "exclude": ["dist"]
+}

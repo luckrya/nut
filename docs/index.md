@@ -1,21 +1,19 @@
-简体中文 | [English](./README.zh-EN.md)
-
 <p align="center">
-  <img width="10%" height="10%"  src="./docs/public/logo.png" alt="Logo" />
+  <img width="10%" height="10%"  src="./public/logo.png" alt="Logo" />
 </p>
 <h1 align="center" >@rc5/nut</h1>
 <p align="center">一个实用的 JavaScript 工具函数库，在工作中提取和总结</p>
-<p align="center">
-    <img src="https://img.shields.io/npm/v/@rc5/nut" alt="NPM Version" />
-    <img src="https://img.shields.io/bundlephobia/minzip/@rc5/nut" alt="npm bundle size (scoped)" >
-    <img src="https://img.shields.io/npm/dm/@rc5/nut.svg" alt="NPM Downloads" />
-    <img src="https://img.shields.io/npm/l/@rc5/nut" alt="License">
+<p align="center" style="display:flex;">
+  <img style="margin-right: 4px;" src="https://img.shields.io/npm/v/@rc5/nut" alt="NPM Version" />
+  <img style="margin-right: 4px;" src="https://img.shields.io/bundlephobia/minzip/@rc5/nut" alt="npm bundle size (scoped)" >
+  <img style="margin-right: 4px;" src="https://img.shields.io/npm/dm/@rc5/nut.svg" alt="NPM Downloads" />
+  <img style="margin-right: 4px;" src="https://img.shields.io/npm/l/@rc5/nut" alt="License">
 </p>
 
 ## 安装
 
 ```sh
-$ npm install @rc5/nut
+pnpm add @rc5/nut
 ```
 
 ## 功能特性
@@ -35,7 +33,3 @@ import { isBoolean } from "@rc5/nut";
 // 在 node 中使用
 import { isBoolean } from "@rc5/nut/node";
 ```
-
-## 文档
-
-该软件包的文档托管在 https://luckrya.github.io/nut/

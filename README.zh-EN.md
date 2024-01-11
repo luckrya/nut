@@ -1,4 +1,4 @@
-简体中文 | [English](./README.zh-EN.md)
+English | [简体中文](./README.md)
 
 <p align="center">
   <img width="10%" height="10%"  src="./docs/public/logo.png" alt="Logo" />
@@ -12,30 +12,30 @@
     <img src="https://img.shields.io/npm/l/@rc5/nut" alt="License">
 </p>
 
-## 安装
+## Installing
 
 ```sh
 $ npm install @rc5/nut
 ```
 
-## 功能特性
+## Features
 
-- 💄 使用 TypeScript 编写，这意味着自定义类型不会有问题
-- 🫂 可用于客户端（Web 浏览器）和服务器（例如 node.js）上的 JavaScript 应用程序
-- 🍇 包含丰富的处理不同方面问题的函数。（不断更新中！）
-- 🥊 高测试覆盖率
-- 🧩 支持构建更小的产物
+- 💄 Written using TypeScript, which means you won't have any problems with custom types.
+- 🫂 Can be used for JavaScript applications on both client (web browser) and server (eg node.js).
+- 🍇 Contains more than 30 functions that handle different aspects of the problem.（Constantly Updating!）
+- 🥊 High test coverage
+- 🧩 Support for building smaller products
 
-## 使用
+## Usage
 
 ```js
-// 在浏览器中使用
+// used in a browser
 import { isBoolean } from "@rc5/nut";
 
-// 在 node 中使用
+// used in node
 import { isBoolean } from "@rc5/nut/node";
 ```
 
-## 文档
+## Documentation
 
-该软件包的文档托管在 https://luckrya.github.io/nut/
+The documentation of this package is hosted at https://luckrya.github.io/nut/
