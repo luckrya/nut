@@ -2,7 +2,7 @@
   <img width="10%" height="10%"  src="./public/logo.png" alt="Logo" />
 </p>
 <h1 align="center" >@rc5/nut</h1>
-<p align="center">一个实用的 JavaScript 工具函数库，在工作中提取和总结</p>
+<p align="center">一个实用的 JavaScript 工具函数库，从实践中提取和总结</p>
 <p align="center" style="display:flex;">
   <img style="margin-right: 4px;" src="https://img.shields.io/npm/v/@rc5/nut" alt="NPM Version" />
   <img style="margin-right: 4px;" src="https://img.shields.io/bundlephobia/minzip/@rc5/nut" alt="npm bundle size (scoped)" >
