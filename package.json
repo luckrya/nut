@@ -1,6 +1,6 @@
 {
   "name": "@rc5/nut",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A practical library of JavaScript tool functions extracted and summarized at work",
   "scripts": {
     "test": "jest",
