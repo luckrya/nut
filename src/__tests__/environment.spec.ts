@@ -1,6 +1,6 @@
 /**
  * @jest-environment jsdom
- * @jest-environment-options {"url": "https://github.com/luckrya/utility"}
+ * @jest-environment-options {"url": "https://github.com/luckrya/nut"}
  */
 
 import {

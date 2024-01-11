@@ -57,13 +57,13 @@
   },
   "author": "@rc5",
   "license": "MIT",
-  "homepage": "https://github.com/luckrya/utility#readme",
+  "homepage": "https://github.com/luckrya/nut#readme",
   "bugs": {
-    "url": "https://github.com/luckrya/utility/issues"
+    "url": "https://github.com/luckrya/nut/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luckrya/utility.git"
+    "url": "git+https://github.com/luckrya/nut.git"
   },
   "packageManager": "pnpm@8.0.0",
   "publishConfig": {
