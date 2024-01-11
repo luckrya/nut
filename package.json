@@ -83,7 +83,9 @@
     "functional"
   ],
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md",
+    "RC5/nut/docs/public/logo.png"
   ],
   "main": "./dist/client/index.js",
   "module": "./dist/client/index.mjs",
