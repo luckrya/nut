@@ -10,7 +10,7 @@ const output = [
     dir: "dist",
     preserveModulesRoot: "src",
     preserveModules: true,
-    sourcemap: false,
+    sourcemap: true,
     entryFileNames: "[name].mjs",
   },
   {
@@ -19,51 +19,73 @@ const output = [
     dir: "dist",
     preserveModulesRoot: "src",
     preserveModules: true,
-    sourcemap: false,
+    sourcemap: true,
     entryFileNames: "[name].js",
   },
-];
-
-const plugins = [
-  commonjs(),
-  json(),
-  // 将 ts 代码转换为有效的 JavaScript 代码
-  esbuild({
-    target: "esnext",
-    minify: true,
-    treeShaking: true,
-  }),
 ];
 
 export default defineConfig([
   {
     input: "src/node/index.ts",
+    external: [
+      "chalk",
+      "semver",
+      "node-fetch",
+      "fs-extra",
+      "execa",
+      "ora",
+      "strip-ansi",
+      "lru-cache",
+      "deepmerge",
+      "read-pkg",
+      "enquirer",
+    ],
     plugins: [
-      resolve({
-        // https://www.npmjs.com/package/@rollup/plugin-node-resolve#exportconditions
-        exportConditions: ["node"],
+      resolve({ exportConditions: ["node"] }),
+      commonjs(),
+      json(),
+      esbuild({
+        target: "esnext",
+        minify: false,
+        treeShaking: true,
       }),
-      ...plugins,
     ],
     output,
   },
   {
     input: "src/client/index.ts",
     plugins: [
-      resolve({
-        // https://www.npmjs.com/package/@rollup/plugin-node-resolve#exportconditions
-        exportConditions: ["default", "module", "require"],
+      resolve(),
+      commonjs(),
+      json(),
+      esbuild({
+        target: "esnext",
+        minify: false,
+        treeShaking: true,
       }),
-      ...plugins,
+    ],
+    output,
+  },
+  {
+    input: "src/client/index.ts",
+    plugins: [
+      resolve(),
+      commonjs(),
+      json(),
+      esbuild({
+        target: "esnext",
+        minify: true,
+        treeShaking: true,
+      }),
     ],
     output: [
-      ...output,
       {
         format: "umd",
         dir: "dist",
         name: "Nut",
         sourcemap: false,
-        entryFileNames: "nut.umd.js", // .[hash]
+        // .[hash]
+        entryFileNames: "nut.umd.js",
       },
     ],
   },

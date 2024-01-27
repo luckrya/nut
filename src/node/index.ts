@@ -5,6 +5,7 @@ import { execa, execaSync, execaCommandSync } from "execa";
 export { chalk, fse, execa, execaSync, execaCommandSync };
 
 export * from "../common";
+export type * from "../types";
 
 export * from "./check-node-version";
 export * from "./fetch";
