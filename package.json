@@ -1,6 +1,6 @@
 {
   "name": "@rc5/nut",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A practical library of JavaScript tool functions extracted and summarized at work",
   "scripts": {
     "dev": "rollup -c -w",
