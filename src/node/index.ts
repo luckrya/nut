@@ -1,8 +1,10 @@
 import chalk from "chalk";
 import fse from "fs-extra";
-import { execa, execaSync, execaCommandSync } from "execa";
+import * as execa from "execa";
+import deepmerge from "deepmerge";
+import enquirer from "enquirer";
 
-export { chalk, fse, execa, execaSync, execaCommandSync };
+export { chalk, fse, execa, deepmerge, enquirer };
 
 export * from "../common";
 export type * from "../types";
