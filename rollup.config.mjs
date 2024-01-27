@@ -27,19 +27,10 @@ const output = [
 export default defineConfig([
   {
     input: "src/node/index.ts",
-    external: [
-      "chalk",
-      "semver",
-      "node-fetch",
-      "fs-extra",
-      "execa",
-      "ora",
-      "strip-ansi",
-      "lru-cache",
-      "deepmerge",
-      "read-pkg",
-      "enquirer",
-    ],
+    // 暴露:   chalk, execa, enquirer 「对外暴露的」
+    // ESM:   chalk~ node-fetch~ execa~ ora~ strip-ansi~ read-pkg~ 「这些在本库里均使用 cjs」
+    // CJS:   semver fs-extra lru-cache deepmerge enquirer
+    external: [/node_modules/],
     plugins: [
       resolve({ exportConditions: ["node"] }),
       commonjs(),

@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "fs-extra";
 import deepmerge from "deepmerge";
-import { readPackageSync, type NormalizedPackageJson } from "read-pkg";
+import { sync as readPackageSync, type NormalizedPackageJson } from "read-pkg";
 import { SCOPED_PKG_REGEXP } from "../common";
 
 export function existsPkgJson(context: string) {

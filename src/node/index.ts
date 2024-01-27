@@ -1,8 +1,15 @@
 import chalk from "chalk";
 import fse from "fs-extra";
-import * as execa from "execa";
+import _execa, { sync as execaSync, command, commandSync } from "execa";
 import deepmerge from "deepmerge";
 import enquirer from "enquirer";
+
+const execa = {
+  execa: _execa,
+  execaSync,
+  command,
+  commandSync,
+};
 
 export { chalk, fse, execa, deepmerge, enquirer };
 
